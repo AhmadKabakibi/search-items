@@ -1,0 +1,17 @@
+{
+  "extends": ["tslint:recommended", "tslint-config-standard", "tslint-config-prettier"],
+  "rulesDirectory": ["tslint-plugin-prettier"],
+  "rules": {
+    "prettier": true,
+    "no-arg": true,
+    "no-bitwise": true,
+    "no-conditional-assignment": true,
+    "no-console": {
+      "severity": "warning",
+      "options": ["debug", "log", "time", "timeEnd", "trace"]
+    },
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "no-namespace": [true, "allow-declarations"]
+  }
+}
