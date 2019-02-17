@@ -1,12 +1,15 @@
 language: node_js
 node_js:
   - 'stable'
+install:
+  - npm install -g codecov
 cache:
   directories:
     - node_modules
 script:
   - yarn lint
   - yarn format
-  - yarn test
   - yarn validate
+  - yarn test:coverage
+  - codecov
   - yarn build
