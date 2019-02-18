@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultiSelectFilter should render a MultiSelectFilter 1`] = `
+<MultiSelectFilter__Wrapper>
+  <MultiSelectFilter__SearchLabel>
+    Product Group
+  </MultiSelectFilter__SearchLabel>
+  <MultiSelectFilter__Container>
+    <MultiSelectFilter__SearchFilter>
+      <MultiSelectFilter__SearchInput
+        onChange={[Function]}
+        placeholder="Search ..."
+        type="text"
+      />
+      <MultiSelectFilter__SearchIconW>
+        <SearchIcon />
+      </MultiSelectFilter__SearchIconW>
+    </MultiSelectFilter__SearchFilter>
+    <MultiSelectFilter__ItemsList>
+      <MultiSelectFilter__Item
+        key="0"
+      >
+        foo
+      </MultiSelectFilter__Item>
+      <MultiSelectFilter__Item
+        key="1"
+      >
+        bar
+      </MultiSelectFilter__Item>
+    </MultiSelectFilter__ItemsList>
+    <MultiSelectFilter__Button
+      onClick={[Function]}
+    >
+      apply
+    </MultiSelectFilter__Button>
+  </MultiSelectFilter__Container>
+</MultiSelectFilter__Wrapper>
+`;
