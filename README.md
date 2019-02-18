@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/AhmadKabakibi/search-items.svg?branch=master)](https://travis-ci.org/AhmadKabakibi/search-items)
 [![codecov](https://codecov.io/gh/AhmadKabakibi/search-items/branch/master/graph/badge.svg)](https://codecov.io/gh/AhmadKabakibi/search-items)
-[![Dependency Status](https://img.shields.io/david/nfl/search-items.svg)](https://david-dm.org/username/search-items)
+[![dependencies Status](https://david-dm.org/AhmadKabakibi/search-items/status.svg)](https://david-dm.org/AhmadKabakibi/search-items)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
 
 Setup for a webapp has a multiple-select-filter component using react and typescript.

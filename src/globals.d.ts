@@ -4,3 +4,4 @@
 declare var shallow
 declare var render
 declare var mount
+declare module 'react-html-parser'

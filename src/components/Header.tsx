@@ -25,7 +25,8 @@ const Container = styled.div`
 
 export const Title = styled.h1`
   width: 100%;
+  margin-left: 14px;
   color: ${props => props.color};
-  font-size: 36px;
+  font-size: 28px;
   line-height: 52px;
 `
