@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home should render a Home 1`] = `
+<Home__Wrapper>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+    title="Home"
+  />
+  <Header
+    color="#EFF0EA"
+    title="Multiple Select Filter"
+  />
+  <Home__Container>
+    <MultiSelectFilter
+      data={
+        Array [
+          "foo",
+          "bar",
+        ]
+      }
+    />
+  </Home__Container>
+</Home__Wrapper>
+`;
