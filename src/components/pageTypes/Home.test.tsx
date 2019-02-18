@@ -5,9 +5,6 @@ import axios from 'axios'
 // Components
 import Home from './Home'
 
-jest.mock('axios')
-// const mockedAxios = axios as jest.Mocked<typeof axios>
-
 // @ts-ignore
 const Component = shallow(<Home />)
 Component.setState({ dataJSON: ['foo', 'bar'] })
