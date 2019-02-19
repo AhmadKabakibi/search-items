@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactHtmlParser from 'react-html-parser'
 
+import Checkbox from './shared/checkbox'
+
 // Styling
 import styled from 'styled-components'
 import colors from '../styles/colors'
@@ -11,6 +13,7 @@ import Icon from './icons/Search'
 interface IState {
   items: string[]
   filteredItems: string[]
+  checkedItems: Map<string, boolean>
 }
 interface IProps {
   data: string[]
@@ -19,7 +22,8 @@ interface IProps {
 export default class MultiSelectFilter extends React.Component<IProps, IState> {
   public state: IState = {
     items: this.props.data,
-    filteredItems: []
+    filteredItems: [],
+    checkedItems: new Map()
   }
 
   public componentWillMount() {
@@ -32,6 +36,14 @@ export default class MultiSelectFilter extends React.Component<IProps, IState> {
       item => item.toLowerCase().search(e.target.value.toLowerCase()) !== -1
     )
     this.setState({ filteredItems: updatedList })
+  }
+
+  public handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const item = e.target.name
+    const isChecked = e.target.checked
+    this.setState(prevState => ({
+      checkedItems: prevState.checkedItems.set(item, isChecked)
+    }))
   }
 
   public render() {
@@ -52,12 +64,18 @@ export default class MultiSelectFilter extends React.Component<IProps, IState> {
           </SearchFilter>
           <ItemsList>
             {filteredItems.map((item, index) => {
-              return <Item key={index}>{ReactHtmlParser(item)}</Item>
+              return (
+                <Item key={index}>
+                  <Checkbox name={item} onChange={this.handleChange.bind(this)}>
+                    {ReactHtmlParser(item)}
+                  </Checkbox>
+                </Item>
+              )
             })}
           </ItemsList>
           <Button
             onClick={() => {
-              alert('(Xx)')
+              alert('Apply Xx')
             }}
           >
             apply
@@ -153,8 +171,5 @@ const ItemsList = styled.ul`
 `
 
 const Item = styled.li`
-  margin: 0;
   padding: 8px 0;
-  color: ${colors.black};
-  line-height: 17px;
 `

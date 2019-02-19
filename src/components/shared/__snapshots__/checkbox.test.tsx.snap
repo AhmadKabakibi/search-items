@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox should render a Checkbox 1`] = `
+<checkbox__Container>
+  <checkbox__Input
+    name="test"
+    onChange={[MockFunction]}
+    type="checkbox"
+  />
+  <checkbox__Marker />
+  <checkbox__Label>
+    checkbox label
+  </checkbox__Label>
+</checkbox__Container>
+`;

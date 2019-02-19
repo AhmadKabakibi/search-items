@@ -121,8 +121,8 @@
   "jest": {
     "coverageThreshold": {
       "global": {
-        "functions": 80,
-        "lines": 80
+        "functions": 75,
+        "lines": 75
       }
     },
     "collectCoverageFrom": [
