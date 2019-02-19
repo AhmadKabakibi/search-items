@@ -9,6 +9,7 @@ import colors from '../../styles/colors'
 // Components
 import Header from '../Header'
 import MultiSelectFilter from '../MultiSelectFilter'
+import textStyles from '../../styles/textStyles'
 
 interface IState {
   dataJSON: string[]
@@ -44,7 +45,7 @@ class Home extends React.Component<IState> {
           {this.state.dataJSON.length > 0 ? (
             <MultiSelectFilter data={this.state.dataJSON} />
           ) : (
-            <div> Loading ... </div>
+            <Loading> Loading ... </Loading>
           )}
         </Container>
       </Wrapper>
@@ -63,5 +64,10 @@ const Container = styled.div`
   min-height: 100vh;
   background-color: ${colors.white};
   color: white;
+`
+
+const Loading = styled.div`
+  ${textStyles.pageTitle};
+  color: ${colors.blueOcean};
 `
 export default Home

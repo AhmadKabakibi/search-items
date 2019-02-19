@@ -20,12 +20,22 @@ exports[`MultiSelectFilter should render a MultiSelectFilter 1`] = `
       <MultiSelectFilter__Item
         key="0"
       >
-        foo
+        <Checkbox
+          name="foo"
+          onChange={[Function]}
+        >
+          foo
+        </Checkbox>
       </MultiSelectFilter__Item>
       <MultiSelectFilter__Item
         key="1"
       >
-        bar
+        <Checkbox
+          name="bar"
+          onChange={[Function]}
+        >
+          bar
+        </Checkbox>
       </MultiSelectFilter__Item>
     </MultiSelectFilter__ItemsList>
     <MultiSelectFilter__Button
